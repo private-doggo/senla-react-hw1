@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/styles/style.css">
+  <link rel="stylesheet" href="assets/fonts/Gilroy/Gilroy.css">
+  <title>Спаси жизнь</title>
+</head>
+
+<body>
+  <div class="wrapper" id="bg-img-wrapper">
+    <picture class="bg-img-pos">
+      <source srcset="assets/images/bg-img/bg-img-xxs.jpg" media="(max-width: 639px)">
+      <source srcset="assets/images/bg-img/bg-img-xs.jpg" media="(max-width: 767px)">
+      <source srcset="assets/images/bg-img/bg-img-sm.jpg" media="(max-width: 1023px)">
+      <source srcset="assets/images/bg-img/bg-img-md.jpg" media="(max-width: 1269px)">
+      <img srcset="assets/images/bg-img/bg-img.jpg" alt="bg-img">
+    </picture>
+  </div>
+
+  <header class="header">
+    <div class="wrapper">
+      <div class="wrapper header__row">
+        <nav class="header__hamburger-menu">
+          <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 0V2.66667H0V0H24ZM0 16H24V13.3333H0V16ZM0 9.33333H24V6.66667H0V9.33333Z" fill="#242424" />
+          </svg>
+        </nav>
+
+        <nav class="header__nav-menu-group">
+          <a class="header__nav-menu-link" href="#">Как помочь</a>
+          <a class="header__nav-menu-link" href="#">Подопечные животные</a>
+        </nav>
+
+        <div class="header--right">
+          <nav class="header__nav-menu-group header__nav-menu-group--right">
+            <a class="header__nav-menu-link" href="#">О нас</a>
+            <a class="header__nav-menu-link" href="#">Контакты</a>
+          </nav>
+
+          <div class="header__socials socials">
+            <a href="https://vk.com/animalsgrodno" target="_blank">
+              <picture>
+                <source srcset="assets/images/vk-logo/vk-logo-sm.svg" media="(max-width: 767px)">
+                <source srcset="assets/images/vk-logo/vk-logo-md.svg" media="(max-width: 1023px)">
+                <img srcset="assets/images/vk-logo/vk-logo.svg" alt="main-bg">
+              </picture>
+            </a>
+            <a href="https://www.instagram.com/animalsgrodno/" target="_blank">
+              <picture>
+                <source srcset="assets/images/inst-logo/inst-logo-sm.svg" media="(max-width: 767px)">
+                <source srcset="assets/images/inst-logo/inst-logo-md.svg" media="(max-width: 1023px)">
+                <img srcset="assets/images/inst-logo/inst-logo.svg" alt="main-bg">
+              </picture>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="top-section">
+      <div class="wrapper">
+        <h1 class="top-section__title">
+          СПАСИ ЖИЗНЬ
+        </h1>
+        <p class="top-section__subtitle">
+          Благотворительное общественное объединение защиты животных
+        </p>
+        <p class="top-section__desc">
+          Наша цель: помощь бездомным животным. Также мы поддерживаем хвостиков, которые оказались в пункте отлова и
+          временного содержания в Гродно.
+        </p>
+        <p class="top-section__text">
+          У животных, находящихся в пункте отлова и временного содержания бродячих животных, есть всего несколько дней
+          до усыпления...
+        </p>
+        <a href="#" class="top-section__btn btn btn-explicit">Хочу помочь</a>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

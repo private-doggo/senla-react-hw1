@@ -1,0 +1,356 @@
+/* STYLE RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* STYLES */
+
+/* common page styles and global classes */
+
+body {
+  font-family: "Gilroy";
+  color: #242424; /* самый распространенный цвет текста */
+}
+
+.wrapper {
+  margin: 0 auto;
+}
+
+#bg-img-wrapper {
+  position: relative;
+}
+
+.bg-img-pos {
+  position: absolute;
+  right: 0;
+}
+
+.btn {
+  display: block;
+  border-radius: 58px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.btn-explicit {
+  background: #fbc832;
+}
+
+.btn-regular {
+  box-sizing: border-box;
+  border: 2px solid #ffc41e;
+}
+
+/* header */
+
+.header,
+#top-section {
+  background: #f6f6f6; /* серый фон для секций */
+}
+
+.header__hamburger-menu,
+.header__nav-menu-group,
+.header__socials,
+.top-section__title,
+.top-section__subtitle,
+.top-section__desc,
+.top-section__text,
+.top-section__btn {
+  position: relative; /* Чтобы контент вылез перед картинкой */
+}
+
+.header__row {
+  justify-content: space-between;
+}
+
+.header__row,
+.header--right {
+  align-items: center;
+  display: flex;
+}
+
+.header__nav-menu-group {
+  display: none;
+}
+
+.header__nav-menu-link {
+  margin-right: 32px;
+  font-weight: 600;
+}
+
+/* top-section */
+
+.top-section__title {
+  font-weight: 700;
+}
+
+.top-section__subtitle {
+  color: #6b6b6b;
+  font-weight: 300;
+}
+
+.top-section__desc {
+  color: #474747;
+  font-weight: 600;
+}
+
+.top-section__text {
+  color: #c78100;
+  font-weight: 600;
+}
+
+/* RESPONSIVE LAYOUT */
+
+@media (min-width: 320px) {
+  .wrapper {
+    width: 300px;
+  }
+
+  /* header */
+
+  .header {
+    padding: 24px 0 20px;
+  }
+
+  .socials a:first-child {
+    margin-right: 22px;
+  }
+
+  /* top-section */
+
+  #top-section {
+    padding-bottom: 28px;
+  }
+
+  .top-section__title {
+    font-size: 30px;
+  }
+
+  .top-section__subtitle {
+    font-size: 12px;
+    width: 211px;
+    margin-bottom: 20px;
+  }
+
+  .top-section__desc {
+    width: 158px;
+    font-size: 14px;
+    margin-bottom: 92px;
+    line-height: 19.6px;
+  }
+
+  .top-section__text {
+    width: 300px;
+    text-align: center;
+    margin: 0 auto 20px;
+  }
+
+  .top-section__btn {
+    width: 194px;
+    height: 30px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #000;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 640px) {
+  .wrapper {
+    width: 382px;
+  }
+
+  /* top-section */
+
+  #top-section__top-section {
+    padding-bottom: 47px;
+  }
+
+  .top-section__subtitle {
+    width: 282px;
+  }
+
+  .top-section__desc {
+    width: 282px;
+    margin-bottom: 152px;
+  }
+
+  .top-section__text {
+    width: 381px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* чтобы прижать картинку к краю */
+  #bg-img-wrapper {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    width: 548px;
+  }
+
+  /* header */
+
+  .socials a:first-child {
+    margin-right: 28px;
+  }
+
+  .header__socials {
+    margin-right: 47px;
+  }
+
+  .top-section__title {
+    font-size: 42px;
+  }
+
+  /* top-section */
+
+  #top-section {
+    padding-bottom: 42px;
+  }
+
+  .top-section__subtitle {
+    font-size: 14px;
+    width: 311px;
+    margin-bottom: 8px;
+  }
+
+  .top-section__desc {
+    width: 311px;
+    margin-bottom: 30px;
+  }
+
+  .top-section__text {
+    width: 204px;
+    text-align: start;
+    margin: 0 0 44px;
+  }
+
+  .top-section__btn {
+    width: 182px;
+    height: 42px;
+    font-size: 20px;
+    line-height: 42px;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    width: 804px;
+  }
+
+  /* header */
+
+  .header {
+    padding: 39px 0 33px;
+  }
+
+  /* Смена вида меню; Можно было сделать одно меню, а затем, с помощью стилей, менять его вид, но я сделал 2 разных меню и скрываю их */
+
+  .header__hamburger-menu {
+    display: none;
+  }
+
+  .header__nav-menu-group {
+    display: inline-block;
+  }
+
+  /**/
+
+  .header__nav-menu-group--right {
+    margin-right: 85px;
+  }
+
+  .header__socials {
+    margin-right: 69px;
+  }
+
+  /* top-section */
+
+  #top-section {
+    padding-bottom: 107px;
+  }
+
+  .top-section__title {
+    font-size: 64px;
+  }
+
+  .top-section__subtitle {
+    width: 461px;
+    margin-bottom: 12px;
+  }
+
+  .top-section__desc {
+    width: 461px;
+    margin-bottom: 43px;
+  }
+
+  .top-section__text {
+    width: 300px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1270px) {
+  .wrapper {
+    width: 1146px;
+  }
+
+  /* header */
+
+  .header {
+    padding-bottom: 76px;
+  }
+
+  .header__socials {
+    margin-right: 97px;
+  }
+
+  .header__nav-menu-group--right {
+    margin-right: 257px;
+  }
+
+  /* top-section */
+
+  #top-section {
+    padding-bottom: 272px;
+  }
+
+  .top-section__title {
+    font-size: 72px;
+  }
+
+  .top-section__subtitle {
+    font-size: 16px;
+    width: 659px;
+  }
+
+  .top-section__desc {
+    width: 659px;
+    font-size: 16px;
+    line-height: 22.4px;
+  }
+
+  .top-section__text {
+    width: 428px;
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1366px) {
+}
