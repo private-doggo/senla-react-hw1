@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/styles/style.css">
-  <link rel="stylesheet" href="assets/fonts/Gilroy/Gilroy.css">
+  <link rel="stylesheet" href="./assets/styles/style.css">
+  <link rel="stylesheet" href="./assets/fonts/Gilroy/Gilroy.css">
   <title>Спаси жизнь</title>
 </head>
 
@@ -16,46 +16,44 @@
       <source srcset="assets/images/bg-img/bg-img-xs.jpg" media="(max-width: 767px)">
       <source srcset="assets/images/bg-img/bg-img-sm.jpg" media="(max-width: 1023px)">
       <source srcset="assets/images/bg-img/bg-img-md.jpg" media="(max-width: 1269px)">
-      <img srcset="assets/images/bg-img/bg-img.jpg" alt="bg-img">
+      <img srcset="assets/images/bg-img/bg-img.jpg">
     </picture>
   </div>
 
   <header class="header">
     <div class="wrapper">
-      <div class="wrapper header__row">
-        <nav class="header__hamburger-menu">
-          <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M24 0V2.66667H0V0H24ZM0 16H24V13.3333H0V16ZM0 9.33333H24V6.66667H0V9.33333Z" fill="#242424" />
-          </svg>
+      <nav class="hamburger-menu">
+        <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 0V2.66667H0V0H24ZM0 16H24V13.3333H0V16ZM0 9.33333H24V6.66667H0V9.33333Z" fill="#242424" />
+        </svg>
+      </nav>
+
+      <nav class="menu-group">
+        <a class="menu-group__link" href="#">Как помочь</a>
+        <a class="menu-group__link" href="#">Подопечные животные</a>
+      </nav>
+
+      <div class="header__right">
+        <nav class="menu-group menu-group--right">
+          <a class="menu-group__link" href="#">О нас</a>
+          <a class="menu-group__link" href="#">Контакты</a>
         </nav>
 
-        <nav class="header__nav-menu-group">
-          <a class="header__nav-menu-link" href="#">Как помочь</a>
-          <a class="header__nav-menu-link" href="#">Подопечные животные</a>
-        </nav>
-
-        <div class="header--right">
-          <nav class="header__nav-menu-group header__nav-menu-group--right">
-            <a class="header__nav-menu-link" href="#">О нас</a>
-            <a class="header__nav-menu-link" href="#">Контакты</a>
-          </nav>
-
-          <div class="header__socials socials">
-            <a href="https://vk.com/animalsgrodno" target="_blank">
-              <picture>
-                <source srcset="assets/images/vk-logo/vk-logo-sm.svg" media="(max-width: 767px)">
-                <source srcset="assets/images/vk-logo/vk-logo-md.svg" media="(max-width: 1023px)">
-                <img srcset="assets/images/vk-logo/vk-logo.svg" alt="main-bg">
-              </picture>
-            </a>
-            <a href="https://www.instagram.com/animalsgrodno/" target="_blank">
-              <picture>
-                <source srcset="assets/images/inst-logo/inst-logo-sm.svg" media="(max-width: 767px)">
-                <source srcset="assets/images/inst-logo/inst-logo-md.svg" media="(max-width: 1023px)">
-                <img srcset="assets/images/inst-logo/inst-logo.svg" alt="main-bg">
-              </picture>
-            </a>
-          </div>
+        <div class="header__socials socials">
+          <a href="https://vk.com/animalsgrodno" target="_blank">
+            <picture>
+              <source srcset="assets/images/vk-logo/vk-logo-sm.svg" media="(max-width: 767px)">
+              <source srcset="assets/images/vk-logo/vk-logo-md.svg" media="(max-width: 1023px)">
+              <img srcset="assets/images/vk-logo/vk-logo.svg">
+            </picture>
+          </a>
+          <a href="https://www.instagram.com/animalsgrodno/" target="_blank">
+            <picture>
+              <source srcset="assets/images/inst-logo/inst-logo-sm.svg" media="(max-width: 767px)">
+              <source srcset="assets/images/inst-logo/inst-logo-md.svg" media="(max-width: 1023px)">
+              <img srcset="assets/images/inst-logo/inst-logo.svg">
+            </picture>
+          </a>
         </div>
       </div>
     </div>
@@ -69,7 +67,7 @@
         </h1>
         <p class="top-section__subtitle">
           Благотворительное общественное объединение защиты животных
-        </p>
+        </p> <!-- возможно тут нужен h2 тег, особенно если h1 отойдет к header -->
         <p class="top-section__desc">
           Наша цель: помощь бездомным животным. Также мы поддерживаем хвостиков, которые оказались в пункте отлова и
           временного содержания в Гродно.
@@ -78,10 +76,76 @@
           У животных, находящихся в пункте отлова и временного содержания бродячих животных, есть всего несколько дней
           до усыпления...
         </p>
-        <a href="#" class="top-section__btn btn btn-explicit">Хочу помочь</a>
+        <a href="#" class="top-section__btn btn btn--explicit">
+          Хочу помочь
+        </a>
+      </div>
+    </section>
+
+    <section></section>
+
+    <section id="help-section">
+      <div class="wrapper">
+        <h2 class="help-section__title">Как помочь?</h2>
+
+        <!-- <figure class="help-section__block">
+          <img src="assets/images/icons/house.svg">
+          <figcaption class="help-section__">
+            Дать хвостику дом или взять на передержку
+          </figcaption>
+        </figure> -->
+
+        <ul class="help-section__list">
+          <li class="help-section__item">
+            <div class="icon-wrapper home-icon"></div>
+            <p>Дать хвостику дом или взять на передержку</p>
+          </li>
+          <li class="help-section__item">
+            <div class="icon-wrapper charity-icon"></div>
+            <p>Перечислить деньги в фонд помощи</p>
+          </li>
+          <li class="help-section__item">
+            <div class="icon-wrapper medicine-icon"></div>
+            <p>Привезти корм, лекарства или другие вещи</p>
+          </li>
+          <li class="help-section__item">
+            <div class="icon-wrapper delivery-icon"></div>
+            <p>Доставить животным еду или отвезти в больницу</p>
+          </li>
+          <li class="help-section__item">
+            <div class="icon-wrapper care-icon"></div>
+            <p>Выгуливать, кормить, мыть или лечить хвостиков</p>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
+
+  <footer></footer>
 </body>
+
+<!-- <section id="pets">
+  <div class="pets__block block-pets">
+    <h3 class="block-pets__title">Дом и любовь для хвостика</h3>
+    <p class="block-pets__text">Самая большая помощь - это спасти жизнь животному, забрать домой, или помочь хвостику
+      с поиском дома. У
+      наших подопечных очень мало времени. Рассказывайте друзья и и знакомым о наших хвостиках, возможно
+      кому-то нужен будет именно такой друг.</p>
+  </div>
+
+  <div class="pets__block block-pets">
+    <h3 class="block-pets__title">Передержка</h3>
+    <p class="block-pets__text">Когда животных ждет скорое усыпление, очень важно найти ему дом. Но пока дом и новые
+      или старые хозяева
+      разыскиваются, хвостику нужно где-то жить. Вы можете забрать к себе домой животных на время. Волонтеры, в
+      свою очередь, обязательно помогут с поиском нового дома.
+    </p>
+  </div>
+
+  <h2></h2>
+
+  ...
+
+</section> -->
 
 </html>

@@ -20,7 +20,8 @@ li {
 
 body {
   font-family: "Gilroy";
-  color: #242424; /* самый распространенный цвет текста */
+  color: #242424;
+  /* самый распространенный цвет текста */
 }
 
 .wrapper {
@@ -43,11 +44,11 @@ body {
   text-align: center;
 }
 
-.btn-explicit {
+.btn--explicit {
   background: #fbc832;
 }
 
-.btn-regular {
+.btn--regular {
   box-sizing: border-box;
   border: 2px solid #ffc41e;
 }
@@ -55,36 +56,39 @@ body {
 /* header */
 
 .header,
-#top-section {
-  background: #f6f6f6; /* серый фон для секций */
+#top-section,
+#help-section {
+  background: #f6f6f6;
+  /* серый фон для секций */
 }
 
-.header__hamburger-menu,
-.header__nav-menu-group,
+.hamburger-menu,
+.menu-group,
 .header__socials,
 .top-section__title,
 .top-section__subtitle,
 .top-section__desc,
 .top-section__text,
 .top-section__btn {
-  position: relative; /* Чтобы контент вылез перед картинкой */
+  position: relative;
+  /* Чтобы контент вылез перед картинкой */
 }
 
-.header__row {
+.header .wrapper {
   justify-content: space-between;
 }
 
-.header__row,
-.header--right {
+.header .wrapper,
+.header__right {
   align-items: center;
   display: flex;
 }
 
-.header__nav-menu-group {
+.menu-group {
   display: none;
 }
 
-.header__nav-menu-link {
+.menu-group__link {
   margin-right: 32px;
   font-weight: 600;
 }
@@ -108,6 +112,67 @@ body {
 .top-section__text {
   color: #c78100;
   font-weight: 600;
+}
+
+/* пропущенная вторая секция */
+
+/* help-section */
+
+.help-section__title {
+  font-weight: 300;
+  text-align: center;
+}
+
+.help-section__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.icon-wrapper {
+  box-sizing: border-box;
+  /* отступы и ширина border'а не изменяют размер блока */
+  border-radius: 50%;
+  border: 2px solid #FFC41E;
+  margin: 0 auto;
+}
+
+.help-section__list p {
+  /* Возможно для этого p нужно придумать название класса по БЭМ */
+  text-align: center;
+  font-weight: 500;
+  color: #474747;
+}
+
+/* вставка иконок */
+
+.home-icon {
+  background: url(../images/icons/home.svg) no-repeat;
+}
+
+.charity-icon {
+  background: url(../images/icons/charity.svg) no-repeat;
+}
+
+.medicine-icon {
+  background: url(../images/icons/medicine.svg) no-repeat;
+}
+
+.delivery-icon {
+  background: url(../images/icons/delivery.svg) no-repeat;
+}
+
+.care-icon {
+  background: url(../images/icons/care.svg) no-repeat;
+}
+
+.home-icon,
+.charity-icon,
+.medicine-icon,
+.delivery-icon,
+.care-icon {
+  background-size: 60% 60%;
+  background-position: 50%;
 }
 
 /* RESPONSIVE LAYOUT */
@@ -164,11 +229,39 @@ body {
     color: #000;
     margin: 0 auto;
   }
+
+  /* help-section */
+
+  #help-section {
+    padding: 32px 0 40px;
+  }
+
+  .help-section__title {
+    font-size: 18px;
+  }
+
+  .help-section__item {
+    width: 142px;
+    margin-top: 24px;
+  }
+
+  .icon-wrapper {
+    width: 80px;
+    height: 80px;
+  }
+
+  .help-section__list p {
+    /* Возможно для этого p нужно придумать название класса по БЭМ */
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 
 @media (min-width: 640px) {
   .wrapper {
-    width: 382px;
+    width: 458px;
+    /* или 382px, на макете по-разному */
   }
 
   /* top-section */
@@ -191,7 +284,9 @@ body {
   }
 }
 
+/* Здесь ничего не писать! */
 @media (max-width: 768px) {
+
   /* чтобы прижать картинку к краю */
   #bg-img-wrapper {
     width: 100%;
@@ -247,6 +342,31 @@ body {
     line-height: 42px;
     margin: 0;
   }
+
+  /* help-section */
+
+  #help-section {
+    padding: 64px 0 54px;
+  }
+
+  .help-section__title {
+    font-size: 24px;
+  }
+
+  .help-section__item {
+    width: 140px;
+    margin-top: 32px;
+  }
+
+  .icon-wrapper {
+    width: 110px;
+    height: 110px;
+  }
+
+  .help-section__list p {
+    /* Возможно для этого p нужно придумать название класса по БЭМ */
+    margin-top: 20px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -260,19 +380,21 @@ body {
     padding: 39px 0 33px;
   }
 
-  /* Смена вида меню; Можно было сделать одно меню, а затем, с помощью стилей, менять его вид, но я сделал 2 разных меню и скрываю их */
+  /* Смена вида меню; Можно было сделать одно меню, 
+  а затем, с помощью стилей, менять его вид, 
+  но я сделал 2 разных меню и скрываю их */
 
-  .header__hamburger-menu {
+  .hamburger-menu {
     display: none;
   }
 
-  .header__nav-menu-group {
+  .menu-group {
     display: inline-block;
   }
 
   /**/
 
-  .header__nav-menu-group--right {
+  .menu-group--right {
     margin-right: 85px;
   }
 
@@ -304,6 +426,20 @@ body {
     width: 300px;
     font-size: 20px;
   }
+
+  /* help-section */
+
+  #help-section {
+    padding: 64px 0 75px;
+  }
+
+  .help-section__title {
+    font-size: 28px;
+  }
+
+  .help-section__item {
+    margin-top: 32px;
+  }
 }
 
 @media (min-width: 1270px) {
@@ -321,7 +457,7 @@ body {
     margin-right: 97px;
   }
 
-  .header__nav-menu-group--right {
+  .menu-group--right {
     margin-right: 257px;
   }
 
@@ -350,7 +486,29 @@ body {
     width: 428px;
     font-size: 24px;
   }
+
+  /* help-section */
+
+  #help-section {
+    padding: 80px 0 79px;
+  }
+
+  .help-section__item {
+    width: 166px;
+    margin-top: 47px;
+  }
+
+  .icon-wrapper {
+    width: 150px;
+    height: 150px;
+  }
+
+  .help-section__list p {
+    /* Возможно для этого p нужно придумать название класса по БЭМ */
+    margin-top: 24px;
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
 
-@media (min-width: 1366px) {
-}
+@media (min-width: 1366px) {}
