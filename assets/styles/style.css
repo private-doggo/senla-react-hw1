@@ -55,11 +55,9 @@ body {
 
 /* header */
 
-.header,
-#top-section,
-#help-section {
+.bg-grey {
   background: #f6f6f6;
-  /* серый фон для секций */
+  /* серый фон для секций и сепараторов */
 }
 
 .hamburger-menu,
@@ -175,6 +173,22 @@ body {
   background-position: 50%;
 }
 
+/* separators */
+
+.separator {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.separator::before,
+.separator::after {
+  content: "";
+  flex: 1;
+  /* для того, чтобы сепараторы занимали все свободное пространство */
+  border: 1px solid #EEBF3A;
+}
+
 /* RESPONSIVE LAYOUT */
 
 @media (min-width: 320px) {
@@ -255,6 +269,14 @@ body {
     margin-top: 8px;
     font-size: 14px;
     line-height: 20px;
+  }
+
+  /* separators */
+
+  .separator-icon {
+    width: 142.25px;
+    /* без отступов по бокам - 110.25px */
+    height: 91px;
   }
 }
 
@@ -367,6 +389,13 @@ body {
     /* Возможно для этого p нужно придумать название класса по БЭМ */
     margin-top: 20px;
   }
+
+  /* separators */
+
+  .separator-icon {
+    width: 130.67px;
+    height: 108.5px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -440,6 +469,13 @@ body {
   .help-section__item {
     margin-top: 32px;
   }
+
+  /* separators */
+
+  .separator-icon {
+    width: 208.25px;
+    height: 171.5px;
+  }
 }
 
 @media (min-width: 1270px) {
@@ -508,6 +544,13 @@ body {
     margin-top: 24px;
     font-size: 16px;
     line-height: 22px;
+  }
+
+  /* separators */
+
+  .separator-icon {
+    width: 306.25px;
+    height: 255.5px;
   }
 }
 
