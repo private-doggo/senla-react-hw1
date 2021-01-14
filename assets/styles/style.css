@@ -28,7 +28,7 @@ body {
   margin: 0 auto;
 }
 
-#bg-img-wrapper {
+.wrapper--bg-img {
   position: relative;
 }
 
@@ -310,7 +310,7 @@ body {
 @media (max-width: 768px) {
 
   /* чтобы прижать картинку к краю */
-  #bg-img-wrapper {
+  .wrapper--bg-img {
     width: 100%;
   }
 }
@@ -481,6 +481,7 @@ body {
 @media (min-width: 1270px) {
   .wrapper {
     width: 1146px;
+    /* 1050 было бы лучше на данном брекпоинте, но я сделал как на макете */
   }
 
   /* header */
