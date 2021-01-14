@@ -32,7 +32,7 @@ body {
   position: relative;
 }
 
-.bg-img-pos {
+.bg-img {
   position: absolute;
   right: 0;
 }
@@ -142,7 +142,7 @@ body {
   color: #474747;
 }
 
-/* вставка иконок */
+/* вставка декоративных иконок */
 
 .home-icon {
   background: url(../images/icons/home.svg) no-repeat;
@@ -481,7 +481,7 @@ body {
 @media (min-width: 1270px) {
   .wrapper {
     width: 1146px;
-    /* 1050 было бы лучше на данном брекпоинте, но я сделал как на макете */
+    /* 1050 было бы лучше на данном брекпоинте, а уже на следующем - 1146, но я сделал как на макете */
   }
 
   /* header */
