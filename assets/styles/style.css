@@ -5,6 +5,17 @@
   padding: 0;
 }
 
+html {
+  font-size: 100%;
+  /* box-sizing: border-box; */
+}
+
+/* *,
+*::before,
+*::after {
+  box-sizing: inherit;
+} */
+
 a {
   text-decoration: none;
   color: inherit;
