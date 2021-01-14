@@ -138,14 +138,6 @@ body {
   justify-content: space-evenly;
 }
 
-.icon-wrapper {
-  box-sizing: border-box;
-  /* отступы и ширина border'а не изменяют размер блока */
-  border-radius: 50%;
-  border: 2px solid #FFC41E;
-  margin: 0 auto;
-}
-
 .help-section__list p {
   /* Возможно для этого p нужно придумать название класса по БЭМ */
   text-align: center;
@@ -175,11 +167,13 @@ body {
   background: url(../images/icons/care.svg) no-repeat;
 }
 
-.home-icon,
-.charity-icon,
-.medicine-icon,
-.delivery-icon,
-.care-icon {
+.icon-wrapper {
+  box-sizing: border-box;
+  /* за счет этого отступы и ширина border'а не изменяют размер блока */
+  border-radius: 50%;
+  border: 2px solid #FFC41E;
+  margin: 0 auto;
+  /* размеры и позиционирование иконок в секции "Как помочь" */
   background-size: 60% 60%;
   background-position: 50%;
 }
@@ -198,6 +192,11 @@ body {
   flex: 1;
   /* для того, чтобы сепараторы занимали все свободное пространство */
   border: 1px solid #EEBF3A;
+}
+
+.separator-icon {
+  background-size: 100% 100%;
+  /* разобраться в этой строчке, она меняет размеры иконок в сепараторе, хотя по идее не должна */
 }
 
 /* RESPONSIVE LAYOUT */
@@ -285,9 +284,10 @@ body {
   /* separators */
 
   .separator-icon {
-    width: 142.25px;
-    /* без отступов по бокам - 110.25px */
-    height: 91px;
+    width: 54px;
+    height: 52px;
+    margin: 0 45px;
+    /* уточнить отступы, потому что они везде разные во всех медиа-запросах и это странно */
   }
 }
 
@@ -404,8 +404,10 @@ body {
   /* separators */
 
   .separator-icon {
-    width: 130.67px;
-    height: 108.5px;
+    width: 64px;
+    height: 62px;
+    margin: 0 25px;
+    /* уточнить отступы, потому что они везде разные во всех медиа-запросах и это странно */
   }
 }
 
@@ -484,8 +486,10 @@ body {
   /* separators */
 
   .separator-icon {
-    width: 208.25px;
-    height: 171.5px;
+    width: 101px;
+    height: 98px;
+    margin: 0 29px;
+    /* уточнить отступы, потому что они везде разные во всех медиа-запросах и это странно */
   }
 }
 
@@ -561,8 +565,9 @@ body {
   /* separators */
 
   .separator-icon {
-    width: 306.25px;
-    height: 255.5px;
+    width: 148px;
+    height: 144px;
+    margin: 0 33px;
   }
 }
 
