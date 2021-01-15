@@ -183,7 +183,7 @@ body {
   background: url(../images/icons/care.svg) no-repeat;
 }
 
-.icon-wrapper {
+.help-section__icon-wrapper {
   box-sizing: border-box;
   /* за счет этого отступы и ширина border'а не изменяют размер блока */
   border-radius: 50%;
@@ -296,7 +296,7 @@ body {
     margin-top: 24px;
   }
 
-  .icon-wrapper {
+  .help-section__icon-wrapper {
     width: 80px;
     height: 80px;
   }
@@ -442,7 +442,7 @@ body {
     margin-top: 32px;
   }
 
-  .icon-wrapper {
+  .help-section__icon-wrapper {
     width: 110px;
     height: 110px;
   }
@@ -649,7 +649,7 @@ body {
     margin-top: 47px;
   }
 
-  .icon-wrapper {
+  .help-section__icon-wrapper {
     width: 150px;
     height: 150px;
   }
