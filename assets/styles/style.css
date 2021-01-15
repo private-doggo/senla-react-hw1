@@ -102,6 +102,22 @@ body {
   font-weight: 600;
 }
 
+.socials {
+  display: flex;
+}
+
+.socials__icon--vk {
+  background: url(../images/vk-logo.svg) no-repeat;
+}
+
+.socials__icon--inst {
+  background: url(../images/inst-logo.svg) no-repeat;
+}
+
+.socials__icon {
+  background-size: 100% 100%;
+}
+
 /* top-section */
 
 .top-section__title {
@@ -192,6 +208,7 @@ body {
   flex: 1;
   /* для того, чтобы сепараторы занимали все свободное пространство */
   border: 1px solid #EEBF3A;
+  /* заменить это на border-top: 2px, если в Chrome (проверить на разных устройствах) будет   "расслаиваться" */
 }
 
 .separator-icon {
@@ -212,7 +229,12 @@ body {
     padding: 24px 0 20px;
   }
 
-  .socials a:first-child {
+  .socials__icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .socials__icon--vk {
     margin-right: 22px;
   }
 
@@ -332,22 +354,27 @@ body {
 
   /* header */
 
-  .socials a:first-child {
-    margin-right: 28px;
-  }
-
   .header__socials {
     margin-right: 47px;
   }
 
-  .top-section__title {
-    font-size: 42px;
+  .socials__icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .socials__icon--vk {
+    margin-right: 28px;
   }
 
   /* top-section */
 
   #top-section {
     padding-bottom: 42px;
+  }
+
+  .top-section__title {
+    font-size: 42px;
   }
 
   .top-section__subtitle {
@@ -440,6 +467,11 @@ body {
 
   .header__socials {
     margin-right: 69px;
+  }
+
+  .socials__icon {
+    width: 49px;
+    height: 49px;
   }
 
   /* top-section */
