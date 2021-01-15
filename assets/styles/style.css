@@ -234,7 +234,7 @@ body {
     height: 32px;
   }
 
-  .socials__icon--vk {
+  .socials a:first-child {
     margin-right: 22px;
   }
 
@@ -363,7 +363,7 @@ body {
     height: 40px;
   }
 
-  .socials__icon--vk {
+  .socials a:first-child {
     margin-right: 28px;
   }
 
