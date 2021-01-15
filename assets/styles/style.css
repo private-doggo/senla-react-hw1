@@ -1,4 +1,4 @@
-/* STYLE RESET */
+/* ? STYLE RESET */
 
 * {
   margin: 0;
@@ -25,7 +25,7 @@ li {
   list-style-type: none;
 }
 
-/* STYLES */
+/* ? STYLES */
 
 /* common page styles and global classes */
 
@@ -64,7 +64,7 @@ body {
   border: 2px solid #ffc41e;
 }
 
-/* header */
+/* ? header */
 
 .bg-grey {
   background: #f6f6f6;
@@ -118,7 +118,7 @@ body {
   background-size: 100% 100%;
 }
 
-/* top-section */
+/* ? top-section */
 
 .top-section__title {
   font-weight: 700;
@@ -141,7 +141,7 @@ body {
 
 /* пропущенная вторая секция */
 
-/* help-section */
+/* ? help-section */
 
 .help-section__title {
   font-weight: 300;
@@ -194,7 +194,7 @@ body {
   background-position: 50%;
 }
 
-/* separators */
+/* ? separators */
 
 .separator {
   display: flex;
@@ -215,20 +215,20 @@ body {
   background-size: 100% 100%;
 }
 
-/* home-section */
+/* ? home-section */
 
 .home-section__block h3 {
   font-weight: 600;
 }
 
-/* RESPONSIVE LAYOUT */
+/* * RESPONSIVE LAYOUT */
 
 @media (min-width: 320px) {
   .wrapper {
     width: 300px;
   }
 
-  /* header */
+  /* * header */
 
   .header {
     padding: 24px 0 20px;
@@ -243,7 +243,7 @@ body {
     margin-right: 22px;
   }
 
-  /* top-section */
+  /* * top-section */
 
   #top-section {
     padding-bottom: 28px;
@@ -281,7 +281,7 @@ body {
     margin: 0 auto;
   }
 
-  /* help-section */
+  /* * help-section */
 
   #help-section {
     padding: 32px 0 40px;
@@ -302,13 +302,13 @@ body {
   }
 
   .help-section__list p {
-    /* Возможно для этого p нужно придумать название класса по БЭМ */
+    /* TODO Возможно для этого p нужно придумать название класса по БЭМ */
     margin-top: 8px;
     font-size: 14px;
     line-height: 20px;
   }
 
-  /* separators */
+  /* * separators */
 
   .separator-icon {
     width: 54px;
@@ -316,7 +316,7 @@ body {
     margin: 0 45px;
   }
 
-  /* home-section */
+  /* * home-section */
 
   #home-section {
     padding: 24px 0 40px;
@@ -343,7 +343,7 @@ body {
     /* или 382px, на макете по-разному */
   }
 
-  /* top-section */
+  /* * top-section */
 
   #top-section__top-section {
     padding-bottom: 47px;
@@ -377,7 +377,7 @@ body {
     width: 548px;
   }
 
-  /* header */
+  /* * header */
 
   .header__socials {
     margin-right: 47px;
@@ -392,7 +392,7 @@ body {
     margin-right: 28px;
   }
 
-  /* top-section */
+  /* * top-section */
 
   #top-section {
     padding-bottom: 42px;
@@ -427,7 +427,7 @@ body {
     margin: 0;
   }
 
-  /* help-section */
+  /* * help-section */
 
   #help-section {
     padding: 64px 0 54px;
@@ -448,11 +448,11 @@ body {
   }
 
   .help-section__list p {
-    /* Возможно для этого p нужно придумать название класса по БЭМ */
+    /* TODO Возможно для этого p нужно придумать название класса по БЭМ */
     margin-top: 20px;
   }
 
-  /* separators */
+  /* * separators */
 
   .separator-icon {
     width: 64px;
@@ -460,7 +460,7 @@ body {
     /* по макету здесь должен быть отступ 25px, а не 45px */
   }
 
-  /* home-section */
+  /* * home-section */
 
   #home-section {
     padding: 44px 0;
@@ -494,7 +494,7 @@ body {
     width: 804px;
   }
 
-  /* header */
+  /* * header */
 
   .header {
     padding: 39px 0 33px;
@@ -527,7 +527,7 @@ body {
     height: 49px;
   }
 
-  /* top-section */
+  /* * top-section */
 
   #top-section {
     padding-bottom: 107px;
@@ -552,7 +552,7 @@ body {
     font-size: 20px;
   }
 
-  /* help-section */
+  /* * help-section */
 
   #help-section {
     padding: 64px 0 75px;
@@ -566,7 +566,7 @@ body {
     margin-top: 32px;
   }
 
-  /* separators */
+  /* * separators */
 
   .separator-icon {
     width: 101px;
@@ -574,7 +574,7 @@ body {
     /* по макету здесь должен быть отступ 29px, а не 45px */
   }
 
-  /* home-section */
+  /* * home-section */
 
   .home-section__block {
     width: 275px;
@@ -598,7 +598,7 @@ body {
     /* 1050 было бы лучше на данном брекпоинте, а уже на следующем - 1146, но я сделал как на макете */
   }
 
-  /* header */
+  /* * header */
 
   .header {
     padding-bottom: 76px;
@@ -612,7 +612,7 @@ body {
     margin-right: 257px;
   }
 
-  /* top-section */
+  /* * top-section */
 
   #top-section {
     padding-bottom: 272px;
@@ -638,7 +638,7 @@ body {
     font-size: 24px;
   }
 
-  /* help-section */
+  /* * help-section */
 
   #help-section {
     padding: 80px 0 79px;
@@ -655,13 +655,13 @@ body {
   }
 
   .help-section__list p {
-    /* Возможно для этого p нужно придумать название класса по БЭМ */
+    /* TODO Возможно для этого p нужно придумать название класса по БЭМ */
     margin-top: 24px;
     font-size: 16px;
     line-height: 22px;
   }
 
-  /* separators */
+  /* * separators */
 
   .separator-icon {
     width: 148px;
@@ -669,7 +669,7 @@ body {
     /* по макету здесь должен быть отступ 33px, а не 45px */
   }
 
-  /* home-section */
+  /* * home-section */
 
   #home-section {
     padding: 72px 0 72px;
