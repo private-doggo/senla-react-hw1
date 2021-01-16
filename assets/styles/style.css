@@ -379,6 +379,10 @@ body {
 
   /* * header */
 
+  .header {
+    padding-bottom: 12px;
+  }
+
   .header__socials {
     margin-right: 47px;
   }
@@ -400,6 +404,7 @@ body {
 
   .top-section__title {
     font-size: 42px;
+    margin-bottom: 6px;
   }
 
   .top-section__subtitle {
@@ -410,7 +415,7 @@ body {
 
   .top-section__desc {
     width: 311px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 
   .top-section__text {
@@ -535,6 +540,7 @@ body {
 
   .top-section__title {
     font-size: 64px;
+    margin-bottom: unset;
   }
 
   .top-section__subtitle {
@@ -620,6 +626,7 @@ body {
 
   .top-section__title {
     font-size: 72px;
+    margin-bottom: 2px;
   }
 
   .top-section__subtitle {
