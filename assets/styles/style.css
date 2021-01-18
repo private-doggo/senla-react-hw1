@@ -7,14 +7,7 @@
 
 html {
   font-size: 100%;
-  /* box-sizing: border-box; */
 }
-
-/* *,
-*::before,
-*::after {
-  box-sizing: inherit;
-} */
 
 a {
   text-decoration: none;
@@ -29,8 +22,10 @@ li {
 
 /* common page styles and global classes */
 
-body {
-  font-family: "Gilroy";
+body,
+button {
+  font-family: "Gilroy", "Arial";
+  /* font fall-back */
   color: #242424;
   /* самый распространенный цвет текста */
 }
@@ -50,6 +45,7 @@ body {
 
 .btn {
   display: block;
+  outline: none;
   border-radius: 58px;
   font-weight: 500;
   text-align: center;
@@ -57,10 +53,11 @@ body {
 
 .btn--explicit {
   background: #fbc832;
+  border: none;
 }
 
 .btn--regular {
-  box-sizing: border-box;
+  background: #fff;
   border: 2px solid #ffc41e;
 }
 
@@ -84,12 +81,18 @@ body {
 }
 
 .header .wrapper {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 .header .wrapper,
 .header__right {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -103,7 +106,12 @@ body {
 }
 
 .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .socials__icon--vk {
@@ -112,6 +120,14 @@ body {
 
 .socials__icon--inst {
   background: url(../images/inst-logo.svg) no-repeat;
+}
+
+.socials__icon--vk-yellow {
+  background: url(../images/vk-logo-yellow.svg) no-repeat;
+}
+
+.socials__icon--inst-yellow {
+  background: url(../images/inst-logo-yellow.svg) no-repeat;
 }
 
 .socials__icon {
@@ -149,8 +165,13 @@ body {
 }
 
 .help-section__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
 }
 
@@ -184,6 +205,7 @@ body {
 }
 
 .help-section__icon-wrapper {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* за счет этого отступы и ширина border'а не изменяют размер блока */
   border-radius: 50%;
@@ -197,21 +219,29 @@ body {
 /* ? separators */
 
 .separator {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 .separator::before,
 .separator::after {
   content: "";
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
   /* для того, чтобы сепараторы занимали все свободное пространство */
   height: 2px;
   background-color: #EEBF3A;
 }
 
-.separator-icon {
+.separator__icon {
   background-size: 100% 100%;
 }
 
@@ -219,6 +249,113 @@ body {
 
 .home-section__block h3 {
   font-weight: 600;
+}
+
+/* ? pets-section */
+
+.pets-section__title {
+  font-weight: 300;
+  text-align: center;
+}
+
+.pets-section__catalog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+
+.pets-section__card {
+  background: #fff;
+  border: 1px solid #D6D6D6;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin-right: auto;
+  /* ! объединить свойства */
+  margin-left: auto;
+}
+
+/* .avatar-wrapper {
+  overflow: hidden;
+  тут не нужно обрезать картинку так как я все равно задаю ей размеры 100% и она никогда не будет вылазить за пределы обертки
+} */
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  /* чтобы картинку не плющило (обрезание картинки) */
+}
+
+.pet-name {
+  font-weight: 500;
+  font-size: 22px;
+  text-align: center;
+  border-bottom: 2px solid rgba(214, 214, 214, 0.5);
+}
+
+.pet-meta {
+  font-weight: 500;
+  font-size: 14px;
+  color: #6B6B6B;
+}
+
+.pet-desc {
+  -webkit-line-clamp: 5;
+  /* Число отображаемых строк */
+  display: -webkit-box;
+  /* Включаем флексбоксы */
+  -webkit-box-orient: vertical;
+  /* Вертикальная ориентация */
+  overflow: hidden;
+  /* Обрезаем всё за пределами блока */
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 6px 0 35px;
+  /* на мобилке нижний отступ 34px по макету, но я это проигнорировал */
+}
+
+.pets-section__btn-group .btn {
+  font-size: 18px;
+  margin: 0 auto;
+}
+
+.pets-section__expand-link {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: 500;
+  font-size: 20px;
+  color: #AD7F00;
+  border-bottom: 1px solid #AD7F00;
+  margin: 0 auto;
+}
+
+.pets-section__expand-link::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 18px;
+  background: url(../images/arrow.svg);
+  margin: 3px 0 0 16px;
+}
+
+.promotion-block {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.promotion-block p {
+  color: #242424;
 }
 
 /* * RESPONSIVE LAYOUT */
@@ -310,7 +447,7 @@ body {
 
   /* * separators */
 
-  .separator-icon {
+  .separator__icon {
     width: 54px;
     height: 52px;
     margin: 0 45px;
@@ -327,6 +464,7 @@ body {
   }
 
   .home-section__block h3 {
+    font-size: 16px;
     text-align: center;
     margin-bottom: 16px;
   }
@@ -334,6 +472,84 @@ body {
   .home-section__block p {
     font-size: 14px;
     line-height: 19.6px;
+  }
+
+  /* ? pets-section */
+
+  #pets-section {
+    padding-bottom: 26px;
+    /* в этой секции сделал отступы, немного отличные от макета */
+  }
+
+  .pets-section__title {
+    font-size: 20px;
+  }
+
+  .pets-section__catalog {
+    padding: 16px 0 30px;
+    /* 22 + 8 нижний отступ, так как высота строки у ссылки увеличивает его */
+  }
+
+  .pets-section__card {
+    width: 300px;
+    padding: 14px 14px 18px;
+  }
+
+  .pets-section__catalog li {
+    margin-bottom: 22px;
+  }
+
+  .pets-section__catalog li:last-child {
+    margin-bottom: unset;
+    /* обнуляем (unset) последний нижний отступ на всех брейкпоинтах так, чтобы остались только отступы между карточками */
+  }
+
+  .avatar-wrapper {
+    height: 284px;
+    margin-bottom: 12px;
+  }
+
+  .pet-name {
+    padding-bottom: 6px;
+  }
+
+  .pet-meta {
+    margin-top: 6px;
+  }
+
+  .pet-desc {
+    height: 100px;
+  }
+
+  .pets-section__btn-group .btn {
+    height: 30px;
+  }
+
+  .pets-section__btn-group .btn:first-child {
+    width: 174px;
+    margin-bottom: 20px;
+  }
+
+  .pets-section__btn-group .btn:last-child {
+    width: 242px;
+  }
+
+  .pets-section__expand-link {
+    margin-bottom: 48px;
+    /* 40 + 8 нижний отступ, так как высота строки у ссылки увеличивает его */
+  }
+
+  .promotion-block p {
+    font-size: 14px;
+    line-height: 19.6px;
+  }
+
+  .pets-section__socials {
+    margin: 6px auto 0;
+  }
+
+  .pets-section__socials a:first-child {
+    margin-right: 48px;
   }
 }
 
@@ -360,6 +576,14 @@ body {
 
   .top-section__text {
     width: 381px;
+  }
+
+  /* * pets-section */
+
+  .promotion-block p {
+    /* ! Название по БЭМ? */
+    width: 382px;
+    margin: 0 auto;
   }
 }
 
@@ -459,7 +683,7 @@ body {
 
   /* * separators */
 
-  .separator-icon {
+  .separator__icon {
     width: 64px;
     height: 62px;
     /* по макету здесь должен быть отступ 25px, а не 45px */
@@ -468,12 +692,15 @@ body {
   /* * home-section */
 
   #home-section {
-    padding: 44px 0;
-    /* или 40px 0 48px */
+    padding: 40px 0 48px;
   }
 
   #home-section .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
   }
 
@@ -491,6 +718,85 @@ body {
     font-size: 20px;
     text-align: start;
     margin-bottom: 8px;
+  }
+
+  /* * pets-section */
+
+  #pets-section {
+    padding-bottom: 74px;
+    /* в этой секции сделал отступы, немного отличные от макета */
+  }
+
+  .pets-section__catalog {
+    padding: 24px 0 20px;
+    /* 12 + 8 нижний отступ, так как высота строки у ссылки увеличивает его */
+  }
+
+  .pets-section__card {
+    width: 368px;
+    padding: 16px 16px 20px;
+  }
+
+  .pets-section__catalog li {
+    margin-bottom: 44px;
+  }
+
+  .avatar-wrapper {
+    height: 356px;
+    margin-bottom: 8px;
+  }
+
+  .pets-section__title {
+    font-size: 24px;
+  }
+
+  .pet-name {
+    padding-bottom: 10px;
+  }
+
+  .pet-meta {
+    margin-top: 8px;
+  }
+
+  .pets-section__btn-group .btn {
+    height: 42px;
+    font-size: 20px;
+  }
+
+  .pets-section__btn-group .btn:first-child {
+    width: 209px;
+    margin-bottom: 17px;
+  }
+
+  .pets-section__btn-group .btn:last-child {
+    width: 296px;
+  }
+
+  .pets-section__expand-link {
+    margin-bottom: 56px;
+    /* 48 + 8 нижний отступ, так как высота строки у ссылки увеличивает его */
+  }
+
+  .promotion-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .promotion-block p {
+    /* ! Название по БЭМ? */
+    width: 379px;
+    font-size: 16px;
+    line-height: 22.4px;
+  }
+
+  .pets-section__socials {
+    margin: unset;
+    margin-left: 10px;
   }
 }
 
@@ -574,7 +880,7 @@ body {
 
   /* * separators */
 
-  .separator-icon {
+  .separator__icon {
     width: 101px;
     height: 98px;
     /* по макету здесь должен быть отступ 29px, а не 45px */
@@ -595,6 +901,21 @@ body {
   .home-section__block p {
     font-size: 16px;
     line-height: 22.4px;
+  }
+
+  /* * pets-section */
+
+  .pets-section__catalog li:nth-last-child(2) {
+    margin-bottom: unset;
+    /* обнуляем (unset) предпоследний нижний отступ на всех брейкпоинтах так, чтобы остались только отступы между карточками */
+  }
+
+  .promotion-block p {
+    width: 529px;
+  }
+
+  .pets-section__socials {
+    margin-left: 7px;
   }
 }
 
@@ -670,7 +991,7 @@ body {
 
   /* * separators */
 
-  .separator-icon {
+  .separator__icon {
     width: 148px;
     height: 144px;
     /* по макету здесь должен быть отступ 33px, а не 45px */
@@ -691,10 +1012,41 @@ body {
     height: unset;
     margin-bottom: 20px;
   }
+
+  /* * pets-section */
+
+  .pets-section__title {
+    font-size: 28px;
+  }
+
+  .pets-section__catalog {
+    padding: 32px 0 28px;
+    /* 20 + 8 нижний отступ, так как высота строки у ссылки увеличивает его */
+  }
+
+  .pets-section__catalog li:nth-last-child(3) {
+    margin-bottom: unset;
+    /* обнуляем (unset) 3 отступ снизу так, чтобы остались только отступы между карточками */
+  }
+
+  .pets-section__expand-link {
+    margin-bottom: 72px;
+    /* 64 + 8 нижний отступ, так как высота строки у ссылки увеличивает его */
+  }
+
+  .promotion-block p {
+    width: 583px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .pets-section__socials {
+    margin-left: 38px;
+  }
 }
 
 @media (min-width: 1366px) {
-  .separator-icon {
+  .separator__icon {
     margin: 0 82px;
   }
 }
