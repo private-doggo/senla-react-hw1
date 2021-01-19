@@ -30,6 +30,22 @@ button {
   /* самый распространенный цвет текста */
 }
 
+button {
+  cursor: pointer;
+}
+
+/* .visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  IE6, IE7
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+} */
+
 .wrapper {
   margin: 0 auto;
 }
@@ -474,7 +490,7 @@ button {
     line-height: 19.6px;
   }
 
-  /* ? pets-section */
+  /* * pets-section */
 
   #pets-section {
     padding-bottom: 26px;
@@ -502,6 +518,13 @@ button {
   .pets-section__catalog li:last-child {
     margin-bottom: unset;
     /* обнуляем (unset) последний нижний отступ на всех брейкпоинтах так, чтобы остались только отступы между карточками */
+  }
+
+  .pets-section__catalog li:nth-of-type(1),
+  .pets-section__catalog li:nth-of-type(2),
+  .pets-section__catalog li:nth-of-type(3) {
+    display: none;
+    /* на мобильной версии скрываем 3 первых карточки (остется 3 последних) */
   }
 
   .avatar-wrapper {
@@ -908,6 +931,13 @@ button {
   .pets-section__catalog li:nth-last-child(2) {
     margin-bottom: unset;
     /* обнуляем (unset) предпоследний нижний отступ на всех брейкпоинтах так, чтобы остались только отступы между карточками */
+  }
+
+  .pets-section__catalog li:nth-of-type(1),
+  .pets-section__catalog li:nth-of-type(2),
+  .pets-section__catalog li:nth-of-type(3) {
+    display: block;
+    /* возвращаем обратно 3 карточки и теперь их 6 на экране */
   }
 
   .promotion-block p {
