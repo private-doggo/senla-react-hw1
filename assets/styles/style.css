@@ -77,6 +77,18 @@ button {
   border: 2px solid #ffc41e;
 }
 
+.link {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: 500;
+  font-size: 20px;
+  color: #AD7F00;
+  border-bottom: 1px solid #AD7F00;
+  margin: 0 auto;
+}
+
 /* ? header */
 
 .bg-grey {
@@ -340,19 +352,7 @@ button {
   margin: 0 auto;
 }
 
-.pets-section__expand-link {
-  display: block;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-weight: 500;
-  font-size: 20px;
-  color: #AD7F00;
-  border-bottom: 1px solid #AD7F00;
-  margin: 0 auto;
-}
-
-.pets-section__expand-link::after {
+.link--pets-section::after {
   content: "";
   position: absolute;
   width: 10px;
@@ -375,6 +375,17 @@ button {
 
 .delivery-section__title {
   font-weight: 600;
+}
+
+/* ? news-section */
+
+.news-section__title {
+  font-weight: 600;
+  text-align: center;
+}
+
+.news-block {
+  display: flex;
 }
 
 /* * RESPONSIVE LAYOUT */
@@ -560,7 +571,7 @@ button {
     width: 242px;
   }
 
-  .pets-section__expand-link {
+  .link--pets-section {
     margin-bottom: 48px;
     /* 40 + 8 нижний отступ, так как высота строки у ссылки увеличивает его */
   }
@@ -603,6 +614,39 @@ button {
     font-size: 18px;
     margin: 0 auto;
   }
+
+  /* * news-section */
+
+  #news-section {
+    padding: 18px 0 24px;
+  }
+
+  .news-section__title {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+  .news-section__content {
+    margin-bottom: 24px;
+  }
+
+  .news-section__content li:first-child {
+    margin-bottom: 24px;
+  }
+
+  .news-block {
+    align-items: flex-start;
+  }
+
+  .news-block__img {
+    width: 79px;
+    margin-right: 16px;
+  }
+
+  .news-block__text {
+    font-size: 14px;
+    line-height: 19.6px;
+  }
 }
 
 @media (min-width: 640px) {
@@ -641,6 +685,12 @@ button {
   /* * delivery-section */
 
   #delivery-section .wrapper {
+    width: 382px;
+  }
+
+  /* * news-section */
+
+  #news-section .wrapper {
     width: 382px;
   }
 }
@@ -830,7 +880,7 @@ button {
     width: 296px;
   }
 
-  .pets-section__expand-link {
+  .link--pets-section {
     margin-bottom: 56px;
     /* 48 + 8 нижний отступ, так как высота строки у ссылки увеличивает его */
   }
@@ -882,6 +932,42 @@ button {
     width: 223px;
     line-height: 42px;
     font-size: 20px;
+    margin: 0;
+  }
+
+  /* * news-section */
+
+  #news-section {
+    padding: 25px 0 32px;
+  }
+
+  #news-section .wrapper {
+    width: 426px;
+  }
+
+  .news-section__title {
+    font-size: 24px;
+    margin-bottom: 26px;
+  }
+
+  .news-section__content {
+    margin-bottom: 34px;
+  }
+
+  .news-section__content li:first-child {
+    margin-bottom: 46px;
+  }
+
+  .news-block {
+    align-items: center;
+  }
+
+  .news-block__img {
+    width: 104px;
+    margin-right: 18px;
+  }
+
+  .news-section__link {
     margin: 0;
   }
 }
@@ -1030,6 +1116,37 @@ button {
     line-height: 22.4px;
     margin-bottom: 38px;
   }
+
+  /* * news-section */
+
+  #news-section {
+    padding: 38px 0 44px;
+  }
+
+  #news-section .wrapper {
+    width: 595px;
+  }
+
+  .news-section__title {
+    margin-bottom: 24px;
+  }
+
+  .news-section__content {
+    margin-bottom: 24px;
+  }
+
+  .news-section__content li:first-child {
+    margin-bottom: 24px;
+  }
+
+  .news-block__img {
+    width: 144px;
+  }
+
+  .news-block__text {
+    font-size: 16px;
+    line-height: 22.4px;
+  }
 }
 
 @media (min-width: 1270px) {
@@ -1142,7 +1259,7 @@ button {
     /* обнуляем (unset) 3 отступ снизу так, чтобы остались только отступы между карточками */
   }
 
-  .pets-section__expand-link {
+  .link--pets-section {
     margin-bottom: 72px;
     /* 64 + 8 нижний отступ, так как высота строки у ссылки увеличивает его */
   }
@@ -1173,6 +1290,34 @@ button {
 
   .delivery-section__text {
     margin-bottom: 24px;
+  }
+
+  /* * news-section */
+
+  #news-section {
+    padding: 55px 0 62px;
+  }
+
+  #news-section .wrapper {
+    width: 778px;
+  }
+
+  .news-section__title {
+    font-size: 28px;
+    margin-bottom: 42px;
+  }
+
+  .news-section__content {
+    margin-bottom: 32px;
+  }
+
+  .news-section__content li:first-child {
+    margin-bottom: 40px;
+  }
+
+  .news-block__img {
+    width: 140px;
+    margin-right: 35px;
   }
 }
 
