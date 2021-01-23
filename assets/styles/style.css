@@ -440,6 +440,12 @@ button {
   color: #474747;
 }
 
+.copyright {
+  font-size: 12px;
+  color: #B3B3B3;
+  text-align: center;
+}
+
 /* ! --------------- RESPONSIVE LAYOUT --------------- */
 
 @media (min-width: 320px) {
@@ -754,6 +760,14 @@ button {
   }
 
   /* * footer */
+
+  #footer {
+    padding: 24px 0 16px;
+  }
+
+  .footer__nav {
+    margin-bottom: 24px;
+  }
 
   .footer__link-list--right {
     align-items: flex-end;
@@ -1146,6 +1160,10 @@ button {
 
   /* * footer */
 
+  #footer {
+    padding-bottom: 20px;
+  }
+
   #footer .wrapper {
     width: 548px;
   }
@@ -1385,11 +1403,12 @@ button {
 
   .footer__link-list--left {
     width: unset;
+    margin-bottom: 24px;
   }
 
-  /* .footer__link-list--right {
+  .footer__link-list li:not(:last-child) {
     margin-bottom: unset;
-  } */
+  }
 }
 
 @media (min-width: 1270px) {
@@ -1599,6 +1618,12 @@ button {
 
   .footer__nav {
     display: flex;
+  }
+
+  /* * footer */
+
+  .footer__link-list--left {
+    margin-bottom: unset;
   }
 }
 
