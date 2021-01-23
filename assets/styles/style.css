@@ -333,18 +333,18 @@ button {
 
 .pet-desc {
   -webkit-line-clamp: 5;
-  /* Число отображаемых строк */
+  /* ? Число отображаемых строк */
   display: -webkit-box;
-  /* Включаем флексбоксы */
+  /* ? Включаем флексбоксы */
   -webkit-box-orient: vertical;
-  /* Вертикальная ориентация */
+  /* ? Вертикальная ориентация */
   overflow: hidden;
-  /* Обрезаем всё за пределами блока */
+  /* ? Обрезаем всё за пределами блока */
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
   margin: 6px 0 35px;
-  /* на мобилке нижний отступ 34px по макету, но я это проигнорировал */
+  /* ? на мобилке нижний отступ 34px по макету, но я это проигнорировал */
 }
 
 .pets-section__btn-group .btn {
@@ -409,7 +409,38 @@ button {
   color: #6B6B6B;
 }
 
-/* * RESPONSIVE LAYOUT */
+/* ? footer */
+
+.footer__nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__link-list--left,
+.footer__link-list--right {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.footer__link-list--right {}
+
+.footer__link-list li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.footer__link-list li a {
+  font-size: 14px;
+  text-decoration: underline;
+  /* border-bottom: 1px solid #242424; */
+}
+
+.footer__link-list--left li a {
+  font-weight: 600;
+  color: #474747;
+}
+
+/* ! --------------- RESPONSIVE LAYOUT --------------- */
 
 @media (min-width: 320px) {
   .wrapper {
@@ -529,7 +560,7 @@ button {
 
   #pets-section {
     padding-bottom: 26px;
-    /* в этой секции сделал отступы, немного отличные от макета */
+    /* ? в этой секции сделал отступы, немного отличные от макета */
   }
 
   .pets-section__title {
@@ -538,7 +569,7 @@ button {
 
   .pets-section__catalog {
     padding: 16px 0 30px;
-    /* 22 + 8 нижний отступ, так как высота строки у ссылки увеличивает его */
+    /* ? 22 + 8 нижний отступ, так как высота строки у ссылки увеличивает его */
   }
 
   .pets-section__card {
@@ -552,14 +583,14 @@ button {
 
   .pets-section__catalog li:last-child {
     margin-bottom: unset;
-    /* обнуляем (unset) последний нижний отступ на всех брейкпоинтах так, чтобы остались только отступы между карточками */
+    /* ? обнуляем (unset) последний нижний отступ на всех брейкпоинтах так, чтобы остались только отступы между карточками */
   }
 
   .pets-section__catalog li:nth-of-type(1),
   .pets-section__catalog li:nth-of-type(2),
   .pets-section__catalog li:nth-of-type(3) {
     display: none;
-    /* на мобильной версии скрываем 3 первых карточки (остется 3 последних) */
+    /* ? на мобильной версии скрываем 3 первых карточки (остется 3 последних) */
   }
 
   .avatar-wrapper {
@@ -594,7 +625,7 @@ button {
 
   .link--pets-section {
     margin-bottom: 48px;
-    /* 40 + 8 нижний отступ, так как высота строки у ссылки увеличивает его */
+    /* * 40 + 8 нижний отступ, так как высота строки у ссылки увеличивает его */
   }
 
   .promotion-block p {
@@ -721,6 +752,12 @@ button {
   .about-section__socials a:first-child {
     margin-right: 24px;
   }
+
+  /* * footer */
+
+  .footer__link-list--right {
+    align-items: flex-end;
+  }
 }
 
 @media (min-width: 640px) {
@@ -780,6 +817,12 @@ button {
 
   .about-section__socials a:first-child {
     margin-right: 28px;
+  }
+
+  /* * footer */
+
+  #footer .wrapper {
+    width: 382px;
   }
 }
 
@@ -1100,6 +1143,25 @@ button {
   .about-section__socials a:first-child {
     margin-right: 32px;
   }
+
+  /* * footer */
+
+  #footer .wrapper {
+    width: 548px;
+  }
+
+  .footer__nav {
+    height: 98px;
+  }
+
+  .footer__link-list--left {
+    width: 367px;
+    align-content: space-between;
+  }
+
+  .footer__link-list--left li:nth-child(3) {
+    margin-bottom: unset;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -1298,6 +1360,36 @@ button {
     line-height: 25.5px;
     margin-bottom: 24px;
   }
+
+  /* * footer */
+
+  #footer .wrapper {
+    width: 804px;
+  }
+
+  .footer__nav {
+    display: block;
+    height: unset;
+  }
+
+
+  .footer__link-list li {
+    margin-right: 21px;
+  }
+
+  .footer__link-list--left,
+  .footer__link-list--right {
+    align-items: flex-start;
+    flex-direction: row;
+  }
+
+  .footer__link-list--left {
+    width: unset;
+  }
+
+  /* .footer__link-list--right {
+    margin-bottom: unset;
+  } */
 }
 
 @media (min-width: 1270px) {
@@ -1497,6 +1589,16 @@ button {
 
   .about-section__socials-block p {
     margin-bottom: 16px;
+  }
+
+  /* * footer */
+
+  #footer .wrapper {
+    width: 1146px;
+  }
+
+  .footer__nav {
+    display: flex;
   }
 }
 
