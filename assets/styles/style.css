@@ -429,13 +429,16 @@ button {
 
 .footer__link-list li a {
   font-size: 14px;
-  text-decoration: underline;
-  /* ! нужно больше отступа у подчеркивания, соответственно использовать border-bottom и line-height */
 }
 
 .footer__link-list--left li a {
   font-weight: 600;
   color: #474747;
+  border-bottom: 1px solid #474747;
+}
+
+.footer__link-list--right li a {
+  border-bottom: 1px solid #242424;
 }
 
 .copyright {
@@ -1494,8 +1497,11 @@ button {
 
   .footer__link-list--left,
   .footer__link-list--right {
-    align-items: flex-start;
     flex-direction: row;
+  }
+
+  .footer__link-list--right {
+    justify-content: center;
   }
 
   .footer__link-list--left {
