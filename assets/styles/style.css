@@ -143,20 +143,24 @@ button {
   width: fit-content;
 }
 
-.socials__icon--vk {
-  background: url(../images/vk-logo.svg) no-repeat;
-}
-
+.socials__icon--vk,
 .socials__icon--inst {
-  background: url(../images/inst-logo.svg) no-repeat;
+  stroke: white;
 }
 
-.socials__icon--vk-yellow {
-  background: url(../images/vk-logo-yellow.svg) no-repeat;
+.socials__icon--vk path,
+.socials__icon--inst path {
+  fill: white;
 }
 
+.socials__icon--vk-yellow,
 .socials__icon--inst-yellow {
-  background: url(../images/inst-logo-yellow.svg) no-repeat;
+  stroke: #E8A700;
+}
+
+.socials__icon--vk-yellow path,
+.socials__icon--inst-yellow path {
+  fill: #E8A700;
 }
 
 .socials__icon {
