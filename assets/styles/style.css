@@ -233,6 +233,7 @@ button {
 }
 
 .help-section__icon-wrapper {
+  display: block;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* за счет этого отступы и ширина border'а не изменяют размер блока */
