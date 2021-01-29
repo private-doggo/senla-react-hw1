@@ -376,6 +376,7 @@ button {
 }
 
 .pet-desc {
+  height: 100px;
   -webkit-line-clamp: 5;
   /* ? Число отображаемых строк */
   display: -webkit-box;
@@ -765,10 +766,6 @@ button {
 
   .pet-meta {
     margin-top: 6px;
-  }
-
-  .pet-desc {
-    height: 100px;
   }
 
   .pets-section__btn-group .btn {
