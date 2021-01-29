@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -471,14 +472,24 @@ button {
 /* ? footer */
 
 .footer__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 .footer__link-list--left,
 .footer__link-list--right {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
@@ -521,10 +532,6 @@ button {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-border-radius: 0 50% 50% 0;
-  -moz-border-radius: 0 50% 50% 0;
-  -ms-border-radius: 0 50% 50% 0;
-  -o-border-radius: 0 50% 50% 0;
   border-radius: 0 50% 50% 0;
   background: #322D1E;
   mix-blend-mode: soft-light;
@@ -947,6 +954,8 @@ button {
   }
 
   .footer__link-list--right {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
     align-items: flex-end;
   }
 
@@ -1138,8 +1147,14 @@ button {
 
   #desc-section .wrapper {
     width: 548px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
   }
 
@@ -1349,8 +1364,14 @@ button {
 
   #volunteering-section .wrapper {
     width: 548px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
 
@@ -1476,6 +1497,7 @@ button {
 
   .footer__link-list--left {
     width: 367px;
+    -ms-flex-line-pack: justify;
     align-content: space-between;
   }
 
@@ -1795,10 +1817,15 @@ button {
 
   .footer__link-list--left,
   .footer__link-list--right {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
   }
 
   .footer__link-list--right {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
 
@@ -2105,6 +2132,8 @@ button {
   }
 
   .footer__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
 
