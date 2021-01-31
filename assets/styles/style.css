@@ -349,10 +349,9 @@ button {
   margin-left: auto;
 }
 
-/* .avatar-wrapper {
+.avatar-wrapper {
   overflow: hidden;
-  тут не нужно обрезать картинку так как я все равно задаю ей размеры 100% и она никогда не будет вылазить за пределы обертки
-} */
+}
 
 .avatar {
   width: 100%;
@@ -361,6 +360,40 @@ button {
   object-fit: cover;
   /* чтобы картинку не плющило (обрезание картинки) */
 }
+
+/* ? pets avatars animation */
+
+.avatar:not(:hover) {
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  -o-transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -ms-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.avatar:hover {
+  -moz-transform: scale(11);
+  -webkit-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.15);
+
+  filter: brightness(85%);
+
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+/* ? */
 
 .pet-name {
   font-weight: 500;
@@ -414,6 +447,28 @@ button {
 
 .promotion-block p {
   color: #242424;
+}
+
+/* ? medicine-section */
+
+#medicine-section .medicine-section__list-item::before {
+  content: '•';
+}
+
+.medicine-section__block-list {
+  margin-bottom: 24px;
+}
+
+.medicine-section__title {
+  font-weight: 600;
+}
+
+.medicine-section__bolder {
+  font-weight: 500;
+}
+
+.color-b6b6b6 {
+  color: #6B6B6B;
 }
 
 /* ? delivery-section */
@@ -799,6 +854,29 @@ button {
     margin-right: 48px;
   }
 
+  /* * medicine-section */
+
+  #medicine-section {
+    padding: 32px 0 48px;
+  }
+
+  .separator--medicine {
+    margin-bottom: 24px;
+  }
+
+  .medicine-section__block-list>li:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  .medicine-section__title {
+    margin-bottom: 16px;
+  }
+
+  .medicine-section__text {
+    font-size: 14px;
+    line-height: 19.6px;
+  }
+
   /* * delivery-section */
 
   #delivery-section {
@@ -1020,6 +1098,12 @@ button {
     /* ! Название по БЭМ? */
     width: 382px;
     margin: 0 auto;
+  }
+
+  /* * medicine-section */
+
+  #medicine-section .wrapper {
+    width: 382px;
   }
 
   /* * delivery-section */
@@ -1323,6 +1407,26 @@ button {
   .pets-section__socials {
     margin: unset;
     margin-left: 10px;
+  }
+
+  /* * medicine-section */
+
+  #medicine-section {
+    padding: 36px 0 66px;
+  }
+
+  #medicine-section .wrapper {
+    width: 398px;
+  }
+
+  .medicine-section__title {
+    font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 24px;
+  }
+
+  .link--medicine-section {
+    margin: 0;
   }
 
   /* * delivery-section */
@@ -1688,6 +1792,34 @@ button {
     margin-left: 7px;
   }
 
+  /* * medicine-section */
+
+  #medicine-section {
+    padding: 36px 0 66px;
+  }
+
+  #medicine-section .wrapper {
+    width: 481px;
+  }
+
+  .medicine-section__title {
+    font-size: 24px;
+  }
+
+  .medicine-section__text {
+    font-size: 16px;
+    line-height: 22.4px;
+  }
+
+  .medicine-section__bolder {
+    font-weight: 700;
+  }
+
+  .medicine-section__list-item,
+  #medicine-section .color-b6b6b6 {
+    margin-top: 6px;
+  }
+
   /* * delivery-section */
 
   #delivery-section {
@@ -2024,6 +2156,24 @@ button {
 
   .pets-section__socials {
     margin-left: 38px;
+  }
+
+  /* * medicine-section */
+
+  .separator--medicine {
+    margin-bottom: 40px;
+  }
+
+  #medicine-section {
+    padding: 36px 0 80px;
+  }
+
+  #medicine-section .wrapper {
+    width: 678px;
+  }
+
+  .medicine-section__title {
+    font-size: 28px;
   }
 
   /* * delivery-section */
