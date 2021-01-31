@@ -576,8 +576,7 @@ button {
 /* ? banner-section */
 
 .banner-section {
-  background: url(../images/dog.jpg) no-repeat center center;
-  background-size: cover;
+  background: no-repeat center center / cover url(../images/dog.jpg);
 }
 
 .banner-section__side-container {
