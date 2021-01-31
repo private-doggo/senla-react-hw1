@@ -16,8 +16,12 @@ a {
   color: inherit;
 }
 
-li {
+ul>li {
   list-style-type: none;
+}
+
+ol>li {
+  margin-left: 1em;
 }
 
 /* ? STYLES */
@@ -449,6 +453,23 @@ button {
   color: #242424;
 }
 
+/* ? charity-section */
+
+.charity-section__title {
+  font-weight: 600;
+  text-align: center;
+}
+
+.charity-section__desc {
+  font-weight: 500;
+  color: #6B6B6B;
+  text-align: center;
+}
+
+.charity-section__block-title {
+  font-weight: 300;
+}
+
 /* ? medicine-section */
 
 #medicine-section .medicine-section__list-item::before {
@@ -461,10 +482,6 @@ button {
 
 .medicine-section__title {
   font-weight: 600;
-}
-
-.medicine-section__bolder {
-  font-weight: 500;
 }
 
 .color-b6b6b6 {
@@ -853,6 +870,57 @@ button {
     margin-right: 48px;
   }
 
+  /* * charity-section */
+
+  #charity-section {
+    padding: 16px 0;
+  }
+
+  .separator--charity {
+    margin-bottom: 24px;
+  }
+
+  .charity-section__title {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+
+  .charity-section__desc {
+    line-height: 24px;
+    margin-bottom: 40px;
+  }
+
+  .charity-section__block-title {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+
+  .charity-section__block-text {
+    font-size: 14px;
+  }
+
+  .charity-section__block-list li:first-child .charity-section__block-text {
+    line-height: 25px;
+  }
+
+  .charity-section__block-list li:last-child .charity-section__block-text {
+    line-height: 19.6px;
+  }
+
+  .charity-section__btn {
+    width: 194px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 18px;
+    margin: 16px auto 0;
+  }
+
+  .charity-section__block-list>li:first-child {
+    margin-bottom: 32px;
+  }
+
   /* * medicine-section */
 
   #medicine-section {
@@ -874,6 +942,10 @@ button {
   .medicine-section__text {
     font-size: 14px;
     line-height: 19.6px;
+  }
+
+  .bolder {
+    font-weight: 500;
   }
 
   /* * delivery-section */
@@ -1097,6 +1169,12 @@ button {
     /* ! Название по БЭМ? */
     width: 382px;
     margin: 0 auto;
+  }
+
+  /* * charity-section */
+
+  #charity-section .wrapper {
+    width: 382px;
   }
 
   /* * medicine-section */
@@ -1406,6 +1484,40 @@ button {
   .pets-section__socials {
     margin: unset;
     margin-left: 10px;
+  }
+
+  /* * charity-section */
+
+  #charity-section .wrapper {
+    width: 501px;
+  }
+
+  .charity-section__title {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .charity-section__desc {
+    width: 358px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .charity-section__block-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .charity-section__block {
+    width: 237px;
+  }
+
+  .charity-section__btn {
+    width: 223px;
+    height: 42px;
+    line-height: 42px;
+    font-size: 20px;
+    margin: 24px 0 0;
   }
 
   /* * medicine-section */
@@ -1791,6 +1903,36 @@ button {
     margin-left: 7px;
   }
 
+  /* * charity-section */
+
+  #charity-section {
+    padding: 28px 0 24px;
+  }
+
+  #charity-section .wrapper {
+    width: 618px;
+  }
+
+  .separator--charity {
+    margin-bottom: 38px;
+  }
+
+  .charity-section__title {
+    font-size: 24px;
+  }
+
+  .charity-section__desc {
+    width: 530px;
+  }
+
+  .charity-section__block {
+    width: 274px;
+  }
+
+  .charity-section__block-title {
+    font-size: 24px;
+  }
+
   /* * medicine-section */
 
   #medicine-section {
@@ -1810,7 +1952,7 @@ button {
     line-height: 22.4px;
   }
 
-  .medicine-section__bolder {
+  .bolder {
     font-weight: 700;
   }
 
@@ -2155,6 +2297,47 @@ button {
 
   .pets-section__socials {
     margin-left: 38px;
+  }
+
+  /* * charity-section */
+
+  #charity-section {
+    padding: 30px 0 56px;
+  }
+
+  #charity-section .wrapper {
+    width: 875px;
+  }
+
+  .separator--charity {
+    margin-bottom: 40px;
+  }
+
+  .charity-section__title {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .charity-section__desc {
+    width: 758px;
+    font-size: 18px;
+  }
+
+  .charity-section__block {
+    width: 390px;
+  }
+
+  .charity-section__block-title {
+    font-size: 28px;
+  }
+
+  .charity-section__block-text {
+    font-size: 16px;
+    line-height: 22.4px;
+  }
+
+  .charity-section__block-list li:last-child .charity-section__block-text {
+    line-height: 27px;
   }
 
   /* * medicine-section */
