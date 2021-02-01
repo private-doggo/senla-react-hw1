@@ -44,7 +44,8 @@ button {
   margin: 0 auto;
 }
 
-.wrapper--bg-img {
+.wrapper--bg-img,
+.wrapper-lettering {
   position: relative;
 }
 
@@ -52,6 +53,11 @@ button {
   position: absolute;
   right: 0;
 }
+
+.lettering {
+  position: absolute;
+}
+
 
 .btn {
   display: block;
@@ -367,7 +373,7 @@ button {
 
 /* ? pets avatars animation */
 
-.avatar:not(:hover) {
+/* .avatar:not(:hover) {
   -moz-transform: scale(1);
   -webkit-transform: scale(1);
   -o-transform: scale(1);
@@ -395,7 +401,7 @@ button {
   -moz-transition: all .3s ease-in-out;
   -ms-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
-}
+} */
 
 /* ? */
 
@@ -640,6 +646,13 @@ button {
 @media (min-width: 320px) {
   .wrapper {
     width: 300px;
+  }
+
+  .lettering {
+    width: 217px;
+    height: 118px;
+    margin-top: 270px;
+    left: 0;
   }
 
   /* * header */
@@ -1134,6 +1147,14 @@ button {
     /* или 382px, на макете по-разному */
   }
 
+  .lettering {
+    width: 385px;
+    height: 210px;
+    margin-top: 178px;
+    margin-left: -112px;
+    left: unset;
+  }
+
   /* * top-section */
 
   #top-section__top-section {
@@ -1240,6 +1261,12 @@ button {
 @media (min-width: 768px) {
   .wrapper {
     width: 548px;
+  }
+
+  .lettering {
+    width: 423px;
+    height: 230px;
+    margin-top: 193px;
   }
 
   /* * header */
@@ -1745,6 +1772,12 @@ button {
     width: 804px;
   }
 
+  .lettering {
+    width: 573px;
+    height: 300px;
+    margin-top: 310px;
+  }
+
   /* * header */
 
   .header {
@@ -2135,6 +2168,12 @@ button {
   .wrapper {
     width: 1146px;
     /* 1050 было бы лучше на данном брекпоинте, а уже на следующем - 1146, но я сделал как на макете */
+  }
+
+  .lettering {
+    width: 772px;
+    height: 404px;
+    margin-top: 374px;
   }
 
   /* * header */
