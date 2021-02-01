@@ -141,28 +141,37 @@ button {
   width: fit-content;
 }
 
-.socials__icon--vk,
-.socials__icon--inst {
-  stroke: white;
+.social-icon {
+  display: block;
+  position: relative;
+  width: 63px;
+  height: 63px;
+  background: linear-gradient(144.1deg, #FFE193 12.45%, #FFC93F 89.31%);
+  box-shadow: 7px 7px 16px rgba(204, 151, 0, 0.6), -4px -4px 8px #FFDB7E, inset 13px 22px 8px #F1C74F;
+  border-radius: 50%;
 }
 
-.socials__icon--vk path,
-.socials__icon--inst path {
-  fill: white;
+.social-icon__circle {
+  position: absolute;
+  width: 49px;
+  height: 49px;
+  background: linear-gradient(150.26deg, #FFE28F 6.75%, #ECBD37 91.17%);
+  box-shadow: 3px 3px 13px #C18F00;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.socials__icon--vk-yellow,
-.socials__icon--inst-yellow {
-  stroke: #E8A700;
-}
-
-.socials__icon--vk-yellow path,
-.socials__icon--inst-yellow path {
-  fill: #E8A700;
-}
-
-.socials__icon {
-  background-size: 100% 100%;
+.social-icon__logo {
+  position: absolute;
+  fill: #f6f6f6;
+  filter: drop-shadow(0px 0px 6px #D19B00);
+  width: 30px;
+  height: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* ? top-section */
