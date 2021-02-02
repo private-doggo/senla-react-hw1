@@ -203,7 +203,6 @@ button {
 .social-icon:active .social-icon__circle--explicit {
   background: linear-gradient(150.26deg, #FFDA71 6.75%, #FFCD40 43.24%, #FBC11B 91.17%);
   box-shadow: 2px 2px 6px #C18F00, inset 3px 3px 10px rgba(199, 129, 0, 0.59);
-  transition: .1s ease-in-out;
 }
 
 .social-icon__circle--regular {
@@ -238,7 +237,6 @@ button {
 .social-icon:active .social-icon__logo--explicit {
   fill: #F2F2F2;
   filter: drop-shadow(0px 0px 5px #D19B00);
-  transition: .1s ease-in-out;
 }
 
 .social-icon__logo--regular {
@@ -252,7 +250,6 @@ button {
 
 .social-icon:active .social-icon__logo--regular {
   fill: #E8A700;
-  transition: .1s ease-in-out;
 }
 
 /* ? top-section */
@@ -393,13 +390,11 @@ button {
 .help-section__icon-wrapper:hover {
   background-color: #FFFFFF;
   box-shadow: 0px 2px 4px #CCCCCC;
-  transition: .2s ease-in-out;
 }
 
 .help-section__icon-wrapper:active {
   background-color: #F8ECCB;
   box-shadow: none;
-  transition: none;
 }
 
 /* ? separators */
@@ -773,7 +768,7 @@ button {
   .lettering {
     width: 217px;
     height: 118px;
-    margin-top: 270px;
+    margin-top: 274px;
     left: 0;
   }
 
@@ -1388,7 +1383,7 @@ button {
   .lettering {
     width: 423px;
     height: 230px;
-    margin-top: 193px;
+    margin-top: 200px;
   }
 
   /* * header */
