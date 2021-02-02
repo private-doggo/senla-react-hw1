@@ -44,8 +44,7 @@ button {
   margin: 0 auto;
 }
 
-.wrapper--bg-img,
-.wrapper-lettering {
+.wrapper--bg-img {
   position: relative;
 }
 
@@ -58,7 +57,6 @@ button {
   position: absolute;
 }
 
-
 .btn {
   display: block;
   border-radius: 58px;
@@ -67,13 +65,15 @@ button {
 }
 
 .btn--explicit {
-  background: #fbc832;
+  background: linear-gradient(180deg, #FFECB5 0%, #FFE69F 0.01%, #FFD45A 100%);
+  box-shadow: 3px 3px 13px rgba(0, 0, 0, 0.25);
   border: none;
 }
 
 .btn--regular {
-  background: #fff;
-  border: 2px solid #ffc41e;
+  background: linear-gradient(180deg, #FBFBFB 0%, #F6F6F6 100%);
+  box-shadow: 3px 3px 13px rgba(128, 128, 128, 0.25);
+  border: none;
 }
 
 .link {
@@ -86,6 +86,16 @@ button {
   color: #AD7F00;
   border-bottom: 1px solid #AD7F00;
   margin: 0 auto;
+}
+
+.link:hover {
+  color: #523C00;
+  border-color: #523C00;
+}
+
+.link:active {
+  color: #F6B400;
+  border-color: #F6B400;
 }
 
 /* ? header */
@@ -132,6 +142,19 @@ button {
   font-weight: 600;
 }
 
+.menu-group__link:hover {
+  /* font-weight: 700; */
+  /* жирность сдвигает текст при наведении */
+  color: #000;
+  border-bottom: 1px solid #000;
+}
+
+.menu-group__link:active {
+  /* font-weight: 700; */
+  color: #6B6B6B;
+  border-bottom: 1px solid #6b6b6b;
+}
+
 .socials {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -172,9 +195,25 @@ button {
   box-shadow: 3px 3px 13px #C18F00;
 }
 
+.social-icon:hover .social-icon__circle--explicit {
+  background: linear-gradient(150.26deg, #FFEAAD 6.75%, #FCE6A7 45.73%, #FFC726 91.17%);
+  box-shadow: 3px 3px 13px #C18F00;
+}
+
+.social-icon:active .social-icon__circle--explicit {
+  background: linear-gradient(150.26deg, #FFDA71 6.75%, #FFCD40 43.24%, #FBC11B 91.17%);
+  box-shadow: 2px 2px 6px #C18F00, inset 3px 3px 10px rgba(199, 129, 0, 0.59);
+  transition: .1s ease-in-out;
+}
+
 .social-icon__circle--regular {
   background: linear-gradient(145.67deg, #FFFFFF 15.39%, #E4E4E4 88.3%);
   box-shadow: 3px 3px 13px #B1B1B1;
+}
+
+.social-icon:hover .social-icon__circle--regular {
+  background: linear-gradient(145.67deg, #FFFFFF 15.39%, #FAFAFA 54.13%, #DADADA 88.3%);
+  box-shadow: 3px 3px 13px #A3A3A3;
 }
 
 .social-icon__logo {
@@ -191,8 +230,29 @@ button {
   fill: #f6f6f6;
 }
 
+.social-icon:hover .social-icon__logo--explicit {
+  fill: #FFFFFF;
+  filter: drop-shadow(0px 1px 3px rgba(144, 93, 0, 0.49));
+}
+
+.social-icon:active .social-icon__logo--explicit {
+  fill: #F2F2F2;
+  filter: drop-shadow(0px 0px 5px #D19B00);
+  transition: .1s ease-in-out;
+}
+
 .social-icon__logo--regular {
+  /* filter: none; */
   fill: #E8A700;
+}
+
+.social-icon:hover .social-icon__logo--regular {
+  fill: #FFB800;
+}
+
+.social-icon:active .social-icon__logo--regular {
+  fill: #E8A700;
+  transition: .1s ease-in-out;
 }
 
 /* ? top-section */
@@ -328,6 +388,18 @@ button {
   /* размеры и позиционирование иконок в секции "Как помочь" */
   background-size: 60% 60%;
   background-position: 50%;
+}
+
+.help-section__icon-wrapper:hover {
+  background-color: #FFFFFF;
+  box-shadow: 0px 2px 4px #CCCCCC;
+  transition: .2s ease-in-out;
+}
+
+.help-section__icon-wrapper:active {
+  background-color: #F8ECCB;
+  box-shadow: none;
+  transition: none;
 }
 
 /* ? separators */
@@ -616,8 +688,28 @@ button {
   border-bottom: 1px solid #474747;
 }
 
+.footer__link-list--left li a:hover {
+  color: #AD7F00;
+  border-color: #AD7F00;
+}
+
+.footer__link-list--left li a:active {
+  color: #474747;
+  border-color: #474747;
+}
+
 .footer__link-list--right li a {
   border-bottom: 1px solid #242424;
+}
+
+.footer__link-list--right li a:hover {
+  color: #AD7F00;
+  border-color: #AD7F00;
+}
+
+.footer__link-list--right li a:active {
+  color: #474747;
+  border-color: #474747;
 }
 
 .copyright {
