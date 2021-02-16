@@ -2,17 +2,96 @@ body {
   background: #f6f6f6;
 }
 
+.pets-header {
+  padding: 22px 0 0;
+}
+
+.pets-header .wrapper {
+  display: grid;
+}
+
+.pets-header__arrow,
+.pets-header__select {
+  display: flex;
+  align-items: center;
+}
+
+.pets-header__select {
+  width: fit-content;
+  margin-left: 27px;
+}
+
+#pets-dropdown {
+  width: 168px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #D6D6D6;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 0 14px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0' mask-type='alpha' maskUnits='userSpaceOnUse' x='7' y='10' width='10' height='5'%3E%3Cpath d='M17 10L7 10L12 15L17 10Z' fill='%23539D36'/%3E%3C/mask%3E%3Cg mask='url(%23mask0)'%3E%3Crect width='24' height='24' transform='matrix(-1 -8.74228e-08 -8.74228e-08 1 24 0)' fill='%236B6B6B'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat 135px center, white;
+}
+
+.pets-header__select label {
+  color: #6B6B6B;
+  margin-right: 8px;
+}
+
 .pet-desc {
   margin-bottom: 15px;
 }
 
 @media (min-width: 320px) {
+  .pets-header .wrapper {
+    align-items: center;
+    display: grid;
+  }
+
+  .arrow-icon {
+    width: 24px;
+    height: 23px;
+  }
+
+  .pets-header__title {
+    margin-left: -12px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .pets-header__arrow p {
+    display: none;
+  }
+
   .link--pets {
     margin: 0 0 15px;
   }
+
+  .pets-section__catalog li:nth-of-type(1),
+  .pets-section__catalog li:nth-of-type(2),
+  .pets-section__catalog li:nth-of-type(3) {
+    display: block;
+  }
 }
 
-@media (min-width: 640px) {}
+@media (min-width: 640px) {
+  .pets-header .wrapper {}
+
+  .pets-header__arrow {
+    width: 161px;
+  }
+
+  .pets-header__arrow p {
+    display: block;
+    margin-left: 8px;
+  }
+
+  .pets-header__select {}
+}
 
 @media (min-width: 768px) {}
 
@@ -20,35 +99,27 @@ body {
 
 @media (min-width: 1270px) {
 
+  .pets-section__catalog {
+    padding-bottom: 43px;
+    /* чтобы при наведении на карточку сайт не менял высоту */
+  }
+
   .pets-section__card {
     height: 606px;
     overflow: hidden;
   }
 
   .pets-section__card:hover {
-    height: 732px;
+    height: 749px;
     overflow: unset;
-    margin-bottom: -126px;
+    margin-bottom: -143px;
+    border-color: #FFDE89;
     position: relative;
     z-index: 1;
     transition: .3s ease-out;
   }
 
-  /* .pets-section__btn-group {
-    display: none;
-  }
-
-  .pets-section__card:hover .pets-section__btn-group {
-    display: block;
-    transition: .3 all ease-in-out;
-  }
-
-  .link--pets {
-    margin: 0;
-  }
-
   .pets-section__card:hover .link--pets {
-    margin-bottom: 15px;
-    transition: .3 all ease-in-out;
-  } */
+    margin-bottom: 32px;
+  }
 }

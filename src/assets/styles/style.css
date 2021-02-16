@@ -29,7 +29,8 @@ ol>li {
 /* common page styles and global classes */
 
 body,
-button {
+button,
+select {
   font-family: "Gilroy", "Arial";
   /* font fall-back */
   color: #242424;
@@ -38,6 +39,10 @@ button {
 
 button {
   cursor: pointer;
+}
+
+select {
+  outline: none;
 }
 
 .wrapper {
@@ -96,6 +101,18 @@ button {
 .link:active {
   color: #F6B400;
   border-color: #F6B400;
+}
+
+.skeleton {
+  background: linear-gradient(to right,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.5) 100%,
+      rgba(255, 255, 255, 0) 80%),
+    lightgray;
+  background-repeat: repeat-y;
+  background-size: 100px 100%;
+  background-position: 0 0;
+  animation: skeleton 1s infinite;
 }
 
 /* ? header */
@@ -467,6 +484,14 @@ button {
   -o-object-fit: cover;
   object-fit: cover;
   /* чтобы картинку не плющило (обрезание картинки) */
+}
+
+@keyframes skeleton {
+  to {
+    background-position: 100% 0,
+      /* move highlight to right */
+      0 0;
+  }
 }
 
 /* ? pets avatars animation */
